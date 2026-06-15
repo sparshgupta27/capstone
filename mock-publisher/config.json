@@ -1,0 +1,48 @@
+{
+  "websocket_url": "ws://localhost:5000",
+  "publish_rates": {
+    "odometry_hz": 10,
+    "lidar_hz": 5,
+    "detection_interval_s": [2, 8],
+    "battery_hz": 0.2,
+    "status_hz": 1,
+    "grid_hz": 0.5
+  },
+  "floor_plan": {
+    "width": 20,
+    "height": 20,
+    "walls": [
+      {"x1": 0, "y1": 0, "x2": 20, "y2": 0},
+      {"x1": 20, "y1": 0, "x2": 20, "y2": 20},
+      {"x1": 20, "y1": 20, "x2": 0, "y2": 20},
+      {"x1": 0, "y1": 20, "x2": 0, "y2": 0},
+
+      {"x1": 0, "y1": 7, "x2": 5, "y2": 7},
+      {"x1": 7, "y1": 7, "x2": 12, "y2": 7},
+      {"x1": 5, "y1": 0, "x2": 5, "y2": 5},
+      {"x1": 12, "y1": 0, "x2": 12, "y2": 5},
+      {"x1": 12, "y1": 7, "x2": 12, "y2": 14},
+      {"x1": 0, "y1": 14, "x2": 8, "y2": 14},
+      {"x1": 10, "y1": 14, "x2": 20, "y2": 14},
+      {"x1": 15, "y1": 7, "x2": 15, "y2": 14},
+      {"x1": 15, "y1": 7, "x2": 20, "y2": 7}
+    ]
+  },
+  "robot": {
+    "start_x": 2.5,
+    "start_y": 3.5,
+    "start_theta": 0,
+    "max_speed": 0.5,
+    "max_angular_speed": 1.0,
+    "radius": 0.3
+  },
+  "lidar": {
+    "num_rays": 360,
+    "max_range": 8.0,
+    "noise_std": 0.02
+  },
+  "detectable_objects": [
+    "chair", "desk", "door", "fire_extinguisher", "person",
+    "box", "trash_bin", "monitor", "bookshelf", "plant"
+  ]
+}
